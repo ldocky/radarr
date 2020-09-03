@@ -13,6 +13,8 @@ dpkg -i repo-mediaarea_1.0-13_all.deb && \
 apt-get update && \
 rm -rf repo-mediaarea_1.0-13_all.deb
 
+RUN apt-get install -y mediainfo mono
+
 RUN curl -L -O $( curl -s https://api.github.com/repos/Radarr/Radarr/releases | grep linux.tar.gz | grep browser_download_url | head -1 | cut -d \" -f 4 ) && \
 tar -xvzf Radarr.develop.*.linux.tar.gz && \
 mv Radarr /opt
