@@ -33,6 +33,6 @@ EXPOSE 7878
 VOLUME /config
 
 #CMD ["mono", "--debug", "./opt/Radarr/Radarr.exe", "--nobrowser", "--data=/config"]
-CMD ["./opt/Radarr/Radarr.exe", "--nobrowser", "--data=/config"]
+CMD ["./opt/Radarr/Radarr", "--nobrowser", "--data=/config"]
 
 
