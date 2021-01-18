@@ -18,7 +18,7 @@ RUN apt-get install -y mediainfo dotnet-sdk-5.0
 
 
 RUN curl -L -O $( curl -s https://api.github.com/repos/Radarr/Radarr/releases | grep linux-core-x64.tar.gz | grep browser_download_url | head -1 | cut -d \" -f 4 ) && \
-tar -xvzf Radarr.master.*.linux-core-x64.tar.gz && \
+tar -xvzf Radarr.develop.*.linux-core-x64.tar.gz && \
 mv Radarr /opt
 
 RUN apt-get autoremove -y && \ 
